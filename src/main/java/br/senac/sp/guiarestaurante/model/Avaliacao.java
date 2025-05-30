@@ -2,6 +2,9 @@ package br.senac.sp.guiarestaurante.model;
 
 import java.util.Calendar;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonProperty.Access;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -17,9 +20,11 @@ public class Avaliacao {
 	private Long id;
 	private double nota;
 	private String comentario;
+	@JsonFormat(pattern = "dd-MM-yyyy")
 	private Calendar dataVisita;
 	//Muitas avaliações são de um restaurante.
 	@ManyToOne
+	@JsonProperty(access = Access.WRITE_ONLY)
 	private Restaurante restaurante;
 	//Muitas avaliações são feitas por um usuário.
 	@ManyToOne
