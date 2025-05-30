@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: br.senac.sp.guiarestaurante.GuiarestauranteApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.781 s -- in br.senac.sp.guiarestaurante.GuiarestauranteApplicationTests

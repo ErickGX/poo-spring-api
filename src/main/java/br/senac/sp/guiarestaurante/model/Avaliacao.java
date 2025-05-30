@@ -18,8 +18,65 @@ public class Avaliacao {
 	private double nota;
 	private String comentario;
 	private Calendar dataVisita;
+	//Muitas avaliações são de um restaurante.
 	@ManyToOne
 	private Restaurante restaurante;
+	//Muitas avaliações são feitas por um usuário.
 	@ManyToOne
 	private Usuario usuario;
+
+
+	public Long getId() {
+		return id;
+	}
+
+	public Avaliacao setId(Long id) {
+		this.id = id;
+		return this;
+	}
+
+	public double getNota() {
+		return nota;
+	}
+
+	public Avaliacao setNota(double nota) {
+		this.nota = nota;
+		return this;
+	}
+
+	public String getComentario() {
+		return comentario;
+	}
+
+	public Avaliacao setComentario(String comentario) {
+		this.comentario = comentario;
+		return this;
+	}
+
+	public Calendar getDataVisita() {
+		return dataVisita;
+	}
+
+	public Avaliacao setDataVisita(Calendar dataVisita) {
+		this.dataVisita = dataVisita;
+		return this;
+	}
+
+	public Restaurante getRestaurante() {
+		return restaurante;
+	}
+
+	public Avaliacao setRestaurante(Restaurante restaurante) {
+		this.restaurante = restaurante;
+		return this;
+	}
+
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public Avaliacao setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+		return this;
+	}
 }

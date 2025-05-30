@@ -18,7 +18,7 @@ public class AppConfig {
 		ds.setDriverClassName("com.mysql.cj.jdbc.Driver");
 		ds.setUrl("jdbc:mysql://localhost:3306/guiarestaurante");
 		ds.setUsername("root");
-		ds.setPassword("");
+		ds.setPassword("root");
 		return ds;
 	}
 	

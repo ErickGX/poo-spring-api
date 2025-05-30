@@ -36,7 +36,7 @@ public class UsuarioController {
     }
 
 
-    @GetMapping("/{id}")                      //PathVar especifica que vai ser recebida via parametro da requisicao
+    @GetMapping("/{id}") //PathVar especifica que vai ser recebida via parametro da requisicao
     public ResponseEntity<Usuario> buscarporId(@PathVariable("id") Long id){ //tipo do dado do id recebe o Longd df na classe
         Optional<Usuario> tipo = repository.findById(id);;
         if (tipo.isPresent()){

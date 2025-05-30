@@ -43,7 +43,7 @@ public ResponseEntity<Object> criarTipo(@RequestBody TipoRestaurante tipo){
 	if (tipo.isPresent()){
 		return ResponseEntity.ok(tipo.get());
 	}else {
-		return ResponseEntity.notFound().build();//build é para montar o objeto not found
+		return ResponseEntity.notFound().build();//build é para montar o objeto not found quando nao retorna msg na resposta
 		}
 	}
 

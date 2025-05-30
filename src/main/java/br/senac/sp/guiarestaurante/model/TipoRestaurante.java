@@ -9,8 +9,7 @@ import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter
-@Setter
+@Data
 @Entity
 public class TipoRestaurante {
 	@Id
@@ -22,36 +21,41 @@ public class TipoRestaurante {
 	private String descricao;
 	private String palavrasChave;
 
+
 	public Long getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public TipoRestaurante setId(Long id) {
 		this.id = id;
+		return this;
 	}
 
 	public String getNome() {
 		return nome;
 	}
 
-	public void setNome(String nome) {
+	public TipoRestaurante setNome(String nome) {
 		this.nome = nome;
+		return this;
 	}
 
 	public String getDescricao() {
 		return descricao;
 	}
 
-	public void setDescricao(String descricao) {
+	public TipoRestaurante setDescricao(String descricao) {
 		this.descricao = descricao;
+		return this;
 	}
 
 	public String getPalavrasChave() {
 		return palavrasChave;
 	}
 
-	public void setPalavrasChave(String palavrasChave) {
+	public TipoRestaurante setPalavrasChave(String palavrasChave) {
 		this.palavrasChave = palavrasChave;
+		return this;
 	}
 }
 
